@@ -9,9 +9,9 @@ Shows **how much free memory you have left**, directly in your toolbar.
 ## Screenshots
 
 <div align="center">
-  <img src="indicator2.png" alt="RAM Light Green Badge State" width="64"/>
-  <img src="indicator3.png" alt="RAM Light Popup Detailed View" width="300"/>
-  <img src="indicator.png" alt="RAM Light Warning Badge State" width="64"/>
+  <img src="icons/indicator2.png" alt="RAM Light Green Badge State" width="64"/>
+  <img src="icons/indicator3.png" alt="RAM Light Popup Detailed View" width="300"/>
+  <img src="icons/indicator.png" alt="RAM Light Warning Badge State" width="64"/>
   <br>
   <em>Left: Normal state badge &nbsp;|&nbsp; Center: Detailed popup view &nbsp;|&nbsp; Right: Low memory warning</em>
 </div>
@@ -32,6 +32,4 @@ Shows **how much free memory you have left**, directly in your toolbar.
 ## Privacy Policy
 - RAM Light does NOT collect, store, process, or transmit any personal data, browsing history, or user information. All operations are performed entirely locally on your device.
 Look policy details [here](policy.md)
-  
-
 ---
