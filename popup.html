@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { 
+      width: 220px; 
+      padding: 20px; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      text-align: center; 
+      background-color: #f9f9f9;
+    }
+    .ram-value { 
+      font-size: 24px; 
+      font-weight: bold; 
+      color: #4CAF50; 
+      margin: 10px 0; 
+      white-space: nowrap;
+    }
+    .ram-label { 
+      font-size: 14px; 
+      color: #666; 
+    }
+    .progress-bar { 
+      width: 100%; 
+      height: 8px; 
+      background: #e0e0e0; 
+      border-radius: 4px; 
+      overflow: hidden; 
+      margin-top: 15px; 
+    }
+    .progress-fill { 
+      height: 100%; 
+      background: #4CAF50; 
+      transition: width 0.3s ease, background 0.3s ease; 
+    }
+  </style>
+</head>
+<body>
+  <div class="ram-label">Free RAM</div>
+  <div class="ram-value" id="ramValue">Loading...</div>
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+  </div>
+  <div class="ram-label" id="totalRam" style="margin-top: 10px; font-size: 12px;"></div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
