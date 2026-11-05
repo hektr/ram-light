@@ -9,9 +9,9 @@ Shows **how much free memory you have left**, directly in your toolbar.
 ## Screenshots
 
 <div align="center">
-  <img src="indicator2.png" alt="RAM Light Green Badge State" width="128"/>
+  <img src="indicator2.png" alt="RAM Light Green Badge State" width="64"/>
   <img src="indicator3.png" alt="RAM Light Popup Detailed View" width="300"/>
-  <img src="indicator.png" alt="RAM Light Warning Badge State" width="128"/>
+  <img src="indicator.png" alt="RAM Light Warning Badge State" width="64"/>
   <br>
   <em>Left: Normal state badge &nbsp;|&nbsp; Center: Detailed popup view &nbsp;|&nbsp; Right: Low memory warning</em>
 </div>
