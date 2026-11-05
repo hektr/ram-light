@@ -29,8 +29,9 @@ Shows **how much free memory you have left**, directly in your toolbar.
 - **Resource Efficient**: Built with Manifest V3 Service Workers. Updates every 5 seconds in the background and every 2 seconds only when the popup is open.
 - **Privacy-First**: Requires **only** the `system.memory` permission. It does not request access to your browsing history, tabs, or any websites.
 
-## Policy:
-- RAM Light does NOT collect, store, process, or transmit any personal data, browsing history, or user information. All operations are performed entirely locally on your device. Look policy [here](policy.md)
+## Privacy Policy:
+- RAM Light does NOT collect, store, process, or transmit any personal data, browsing history, or user information. All operations are performed entirely locally on your device.
+Look policy details [here](policy.md)
   
 
 ---
