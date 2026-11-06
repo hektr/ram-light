@@ -1,15 +1,12 @@
 // Short formatting for badge (max 4 characters)
 function formatMemoryBadge(mb) {
   if (mb < 1000) {
-    // Up to 999 MB - show whole number
     return `${Math.round(mb)}M`;
   }
   const gb = mb / 1024;
   if (gb < 10) {
-    // From 1 to 9.9 GB - keep one decimal place
     return `${gb.toFixed(1)}G`;
   }
-  // 10 GB and above - round to whole number
   return `${Math.round(gb)}G`;
 }
 
@@ -23,33 +20,44 @@ async function updateBadge() {
     
     let bgColor;
     if (percentFree < 20) {
-      bgColor = '#f44336';
+      bgColor = '#ef4444'; // Rose/Red
     } else if (percentFree < 50) {
-      bgColor = '#ff9800';
+      bgColor = '#f59e0b'; // Amber/Orange
     } else {
-      bgColor = '#4CAF50';
+      bgColor = '#10b981'; // Emerald/Green
     }
     await chrome.action.setBadgeBackgroundColor({ color: bgColor });
     
   } catch (error) {
     console.error("Badge update error:", error);
     await chrome.action.setBadgeText({ text: "ERR" });
-    await chrome.action.setBadgeBackgroundColor({ color: '#9e9e9e' });
+    await chrome.action.setBadgeBackgroundColor({ color: '#9ca3af' });
   }
 }
 
-// Run on Chrome startup
-chrome.runtime.onStartup.addListener(() => { 
-	updateBadge();
-});
-	
-// Run on extension install or update
+// Initialize badge on startup/install
+chrome.runtime.onStartup.addListener(updateBadge);
+chrome.runtime.onInstalled.addListener(updateBadge);
+
+// Create an alarm to update the badge every 1 minute (minimum allowed by Chrome)
+// This is much more battery-friendly and reliable than setInterval in a Service Worker.
 chrome.runtime.onInstalled.addListener(() => {
-	updateBadge();
+  chrome.alarms.create('updateBadgeAlarm', { periodInMinutes: 1 });
 });
 
-// Run immediately when service worker loads
-updateBadge();
+chrome.alarms.onAlarm.addListener((alarm) => {
+  if (alarm.name === 'updateBadgeAlarm') {
+    updateBadge();
+  }
+});
 
-// Refresh every 5 seconds
-setInterval(updateBadge, 5000);
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === 'updateBadge') {
+    updateBadge();
+    sendResponse({ status: 'ok' });
+  }
+});
+
+// Also update immediately when the service worker wakes up (e.g., user clicks the icon)
+updateBadge();
