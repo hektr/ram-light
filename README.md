@@ -25,11 +25,13 @@ Shows **how much free memory you have left**, directly in your toolbar.
   - **Green**: > 50% free (Plenty of memory)
   - **Orange**: 20% – 50% free (Moderate load)
   - **Red**: < 20% free (Critically low)
+- **One-Click Tab Discard**: Free up memory instantly by discarding inactive tabs. Tabs are safely suspended (not closed) and reload when clicked.
 - **Detailed Popup**: Click the icon to see a real-time progress bar, exact free memory, and total system RAM.
-- **Resource Efficient**: Built with Manifest V3 Service Workers. Updates every 5 seconds in the background and every 2 seconds only when the popup is open.
-- **Privacy-First**: Requires **only** the `system.memory` permission. It does not request access to your browsing history, tabs, or any websites.
+- **Battery Efficient**: Built with Manifest V3 Service Workers and Chrome Alarms API. Updates every minute in the background to minimize battery drain, and every 2 seconds only when the popup is open.
+- **Privacy-First**: Requires minimal permissions (`system.memory`, `tabs`, `alarms`). Does not request access to your browsing history or any websites.
 
 ## Privacy Policy
 - RAM Light does NOT collect, store, process, or transmit any personal data, browsing history, or user information. All operations are performed entirely locally on your device.
+
 Look policy details [here](policy.md)
 ---
