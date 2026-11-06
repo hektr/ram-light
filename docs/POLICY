@@ -1,0 +1,21 @@
+Privacy Policy for RAM Light
+
+Last updated: November 2026
+
+RAM Light is a lightweight Chrome extension designed to monitor system memory and help users free up RAM by discarding inactive tabs.
+
+1. Data Collection  
+RAM Light does NOT collect, store, process, or transmit any personal data, browsing history, or user information. All operations are performed entirely locally on your device.
+
+2. Use of Permissions  
+- system.memory: This permission is used exclusively to read the total and available RAM on your local machine to display it in the extension popup and badge. This data never leaves your device.
+
+- tabs: This permission is used solely to identify inactive, non-pinned background tabs and trigger the native chrome.tabs.discard() API to free up memory upon explicit user action (clicking the "Discard inactive tabs" button). RAM Light does NOT read, modify, or track the content, URLs, or titles of your tabs.
+
+- alarms: This permission is used to schedule periodic background updates of the toolbar badge (every minute) using Chrome's Alarms API. This approach is more battery-efficient than continuous polling and is the recommended method for Manifest V3 extensions.
+
+3. Third-Party Sharing  
+We do not share any data with third parties, as no data is collected or transmitted.
+
+4. Contact  
+If you have any questions about this Privacy Policy, please contact us via the support link provided in the Chrome Web Store listing.
