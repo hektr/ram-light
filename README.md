@@ -33,5 +33,9 @@ Shows **how much free memory you have left**, directly in your toolbar.
 ## Privacy Policy
 - RAM Light does NOT collect, store, process, or transmit any personal data, browsing history, or user information. All operations are performed entirely locally on your device.
 
-Look policy details [here](policy.md)
+Look policy details [here](docs/POLICY)
+
 ---
+
+## MIT LICENSE 
+- [MIT](docs/LICENSE)
