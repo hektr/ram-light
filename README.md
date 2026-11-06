@@ -37,5 +37,4 @@ Look policy details [here](docs/POLICY)
 
 ---
 
-## MIT LICENSE 
-- [MIT](docs/LICENSE)
+## [MIT LICENSE](docs/LICENSE)
