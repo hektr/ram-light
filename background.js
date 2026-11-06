@@ -38,5 +38,18 @@ async function updateBadge() {
   }
 }
 
+// Run on Chrome startup
+chrome.runtime.onStartup.addListener(() => { 
+	updateBadge();
+});
+	
+// Run on extension install or update
+chrome.runtime.onInstalled.addListener(() => {
+	updateBadge();
+});
+
+// Run immediately when service worker loads
 updateBadge();
+
+// Refresh every 5 seconds
 setInterval(updateBadge, 5000);
