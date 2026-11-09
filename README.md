@@ -20,7 +20,7 @@ Shows **how much free memory you have left** directly in your toolbar and helps 
 ## Screenshots
 
 <div align="center">
-  <img src="icons/ramlight.png" alt="RAM Light extension" width="400"/>
+  <img src="icons/ramlight.png" alt="RAM Light extension" width="480"/>
 </div>
 
 ---
