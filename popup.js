@@ -33,6 +33,9 @@ async function updateRam() {
       fill.style.background = 'var(--good)';
       valueText.style.color = 'var(--good)';
     }
+
+    chrome.runtime.sendMessage({ action: 'updateBadge' }); // Sync badge updates with popup refresh cycle
+    
   } catch (error) {
     document.getElementById('ramValue').innerText = "API Error";
     console.error("RAM Light Error:", error);
