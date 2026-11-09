@@ -1,6 +1,6 @@
 // Short formatting for badge (max 4 characters)
 function formatMemoryBadge(mb) {
-  if (mb < 1000) {
+  if (mb < 100) {
     return `${Math.round(mb)}M`;
   }
   const gb = mb / 1024;
