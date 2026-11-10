@@ -4,8 +4,10 @@ function formatMemoryBadge(mb) {
     return `${Math.round(mb)}M`;
   }
   const gb = mb / 1024;
-  if (gb < 10) {
-    return `${gb.toFixed(1)}G`;
+  const roundedGb = Math.round(gb * 10) / 10;
+  
+  if (roundedGb < 10) {
+    return `${roundedGb.toFixed(1)}G`;
   }
   return `${Math.round(gb)}G`;
 }
