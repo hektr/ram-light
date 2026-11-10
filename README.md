@@ -27,7 +27,7 @@ Shows **how much free memory you have left** directly in your toolbar and helps 
 
 ## Features
 
-- **Smart Toolbar Badge**: Displays free RAM directly on the extension icon with intelligent formatting (e.g., `512M`, `1.2G`, `15G`).
+- **Smart Toolbar Badge**: Displays free RAM directly on the extension icon with intelligent formatting (e.g., `0.5G`, `1.2G`, `15G`).
 - **Color-Coded Alerts**: The badge background changes dynamically based on free memory percentage:
   - **Green**: > 50% free (Plenty of memory)
   - **Orange**: 20% – 50% free (Moderate load)
