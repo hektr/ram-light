@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "RAM Light",
-  "version": "2.2",
+  "version": "2.3.1",
   "description": "Real-time monitor of free RAM",
   "author": "hektr992",
   "homepage_url": "https://github.com/hektr/ram-light",
